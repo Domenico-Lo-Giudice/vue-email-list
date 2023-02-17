@@ -13,7 +13,7 @@
     />
 
     <!-- TITLE -->
-    <title>VUE</title>
+    <title>vue-email-list</title>
 
     <!-- BOOTSTRAP -->
     <link
@@ -29,8 +29,18 @@
       href="./css/style.css"
     />
 
+    <!-- AXIOS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+      defer
+    ></script>
+
     <!-- VUE JS -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.min.js"
+    ></script>
 
     <!-- MAIN JS -->
     <script
@@ -41,6 +51,10 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <ul>
+        <li v-for="mail in emails">{{mail}}</li>
+      </ul>
+    </div>
   </body>
 </html>
